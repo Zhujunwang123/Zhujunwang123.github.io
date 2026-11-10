@@ -24,7 +24,7 @@ img{max-width:100%}
 <meta name="description" content="Zhujun Wang, Ph.D. Operations research and decision analytics for supply chains, community resilience to natural hazards, and human-AI decision support.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Caveat:wght@500;700&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Inter:wght@400;500;600;700&family=Gloock&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Caveat:wght@500;700&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: clean white academic site; colour lives in the illustrated research scenes and a single green accent. */
 :root{
@@ -412,6 +412,117 @@ h3.sub{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-tran
 .tagd{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
 .tagd.done{color:var(--mal)} .tagd.live{color:var(--ember)}
 
+/* ===================== Professional type system =====================
+   Academic pages: one serif for headings, one sans for text, one accent colour.
+   The Background page keeps its playful fonts and colours. */
+:root{--f-display:"Source Serif 4", "Iowan Old Style", Georgia, serif; --f-body:"Inter", "Segoe UI", system-ui, sans-serif}
+body{font-size:16px;line-height:1.65;font-feature-settings:"cv11","ss01"}
+h1,h2,h3{font-weight:600;letter-spacing:-.012em}
+.brand{font-weight:600;font-size:1.2rem;letter-spacing:-.01em}
+nav.tabs a{font-size:.9rem}
+.mono{font-family:var(--f-body);font-size:.72rem;font-weight:600;letter-spacing:.09em}
+.page:not(#pg-background) .mono[style*="color"]{color:var(--mal)!important}
+main section.page{padding-block:48px 72px}
+.page-head{margin-bottom:36px}
+.page-head h1{font-size:clamp(2.1rem,4.4vw,2.85rem)}
+.page-head p{font-size:1.06rem}
+.block-h h2{font-size:1.5rem}
+.section-gap{margin-top:64px}
+.sec-title{font-size:1.5rem;padding-bottom:12px;margin-bottom:22px;border-bottom:2px solid var(--ink)}
+
+/* hero */
+.status{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted);margin-bottom:22px}
+.status a{font-weight:600}
+.hero{align-items:start;gap:56px}
+.hero h1{font-size:clamp(2.2rem,4.5vw,3.25rem);line-height:1.1}
+.hero h1 em{font-weight:600}
+.hero .lede{font-size:1.08rem;line-height:1.65;color:var(--muted)}
+.who b{font-size:1.15rem}
+.who span{line-height:1.5}
+.headshot{width:112px;height:140px;border-radius:12px}
+.btn{font-size:.9rem;padding:10px 18px}
+.lab{margin-top:44px;border-radius:12px}
+.lab .tag{font-size:.72rem}
+
+/* at a glance */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:24px 22px;border-left:1px solid var(--line);display:grid;gap:4px;align-content:start}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{font-family:var(--f-display);font-weight:600;font-size:2.35rem;line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-bottom:6px}
+.stat b i{font-style:normal;font-size:1.1rem;color:var(--muted);font-weight:400}
+.stat span{font-weight:600;font-size:.95rem}
+.stat small{font-size:.84rem;color:var(--muted);line-height:1.45}
+.stat.accent b{color:var(--mal)}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(3){border-left:0;padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:460px){.stats{grid-template-columns:minmax(0,1fr)}.stat{border-left:0;padding-left:0}.stat+.stat{border-top:1px solid var(--line)}}
+
+/* highlights */
+.hl-section{margin-top:64px}
+.hl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.hl{border:1px solid var(--line);border-top:3px solid var(--mal);border-radius:4px 4px 10px 10px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.hl-label{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--mal)}
+.hl h3{font-family:var(--f-display);font-size:1.22rem;line-height:1.3}
+.hl p{font-size:.95rem;color:var(--muted)}
+.hl-foot{margin-top:auto!important;padding-top:10px;border-top:1px solid var(--line);font-size:.86rem!important}
+.hl-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.hl-list b{display:block;font-weight:600;font-size:.97rem;line-height:1.4}
+.hl-list span{display:block;font-size:.86rem;color:var(--muted);margin-top:2px}
+@media (max-width:900px){.hl-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* news: clean dated list */
+.news{gap:56px}
+.nlist{list-style:none;margin:0;padding:0}
+.nlist li{display:grid;grid-template-columns:90px minmax(0,1fr);gap:18px;padding:14px 0;border-top:1px solid var(--line)}
+.nlist li:first-child{border-top:0;padding-top:0}
+.nlist time{font-size:.86rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.nlist p{font-size:.96rem}
+.nlist .nmeta{font-size:.85rem;color:var(--muted);margin-top:4px}
+.nk{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.nk.nk-grant{color:var(--mal)}
+@media (max-width:520px){.nlist li{grid-template-columns:minmax(0,1fr);gap:2px}}
+.callout{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:24px}
+.callout h2{font-size:1.45rem}
+.callout ul{color:var(--muted)}
+.callout .btn{border-color:var(--ink);color:var(--ink)}
+.callout .btn.solid{background:var(--ink);color:var(--paper)}
+
+/* research */
+.ov b{font-size:1.15rem;font-weight:600}
+.ov{border-radius:10px}
+.topic-head h2{font-size:clamp(1.6rem,3vw,2.05rem)}
+.topic-head .q{font-family:var(--f-display);font-weight:400;font-style:italic;font-size:1.18rem;line-height:1.5;color:var(--muted)}
+h3.sub{font-family:var(--f-body);font-size:.72rem;font-weight:700;letter-spacing:.09em}
+.outputs{border-left:2px solid var(--mal)}
+.chip{font-size:.85rem}
+
+/* publications, talks, grants, teaching */
+.scholar{border-style:solid;border-radius:8px}
+.scholar b{font-weight:600}
+.pubgroup > h2,.year > h2{font-size:1.35rem}
+.year > h2{font-size:1.6rem}
+.pub h3{font-size:1rem}
+.pub .n{font-family:var(--f-body);font-weight:600}
+.pill{font-family:var(--f-body);font-weight:600;font-size:.66rem;letter-spacing:.07em}
+.pill.jmp{background:var(--mal);border-color:var(--mal)}
+.talk .pill[style*="--flu"]{color:var(--mal)!important}
+.talk .pill[style*="--mal"]{color:var(--muted)!important}
+.next{border-radius:10px}
+.next h2{font-size:1.4rem}
+.next .big{font-weight:600;font-size:2.4rem}
+.rating{border-width:1px;border-radius:10px}
+.rating .score{font-weight:600;font-size:3.6rem}
+.rating h2,.track h3,.role h3,.course h3{font-size:1.2rem}
+.course .num{font-family:var(--f-body);font-weight:700}
+.grant-sum b{font-weight:600;font-size:2.1rem}
+.grant-sum div:first-child b{color:var(--mal)}
+.grant{border-radius:10px}
+.grant .amt b{font-family:var(--f-display);font-weight:600;font-size:1.3rem}
+footer h2{font-size:1.6rem}
+.email code{font-family:var(--f-body)}
+
+/* Background page keeps its personality */
+#pg-background h1,#pg-background h2,#pg-background h3{font-family:"Gloock", Georgia, serif;font-weight:400;letter-spacing:0}
+
 .fade{animation:fade .45s ease both}
 @keyframes fade{from{opacity:.001;transform:translateY(6px)}to{opacity:1;transform:none}}
 </style>
@@ -443,23 +554,19 @@ h3.sub{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-tran
 <!-- ============ HOME ============ -->
 <section class="page" id="pg-home" data-page="home">
   <div class="wrap">
-    <a class="market" href="#collaborate">
-      <span class="dot-live" aria-hidden="true"></span>
-      <span><b>On the 2026–27 academic job market.</b> Open to faculty positions and new collaborations.</span>
-      <span class="go">Let's work together →</span>
-    </a>
     <div class="hero">
       <div>
+        <p class="status"><span class="dot-live" aria-hidden="true"></span>On the 2026–27 academic job market · <a href="#collaborate">Get in touch</a></p>
         <div class="who">
           <img class="headshot" src="img/headshot.jpg" alt="Portrait of Zhujun Wang">
-          <div><b>Zhujun Wang, Ph.D.</b><span>Postdoctoral Research Associate, Washington State University, Pullman, Washington, USA<br>Postdoctoral advisor: Prof. Ji Yun Lee</span></div>
+          <div><b>Zhujun Wang, Ph.D.</b><span>Postdoctoral Research Associate<br>Department of Civil and Environmental Engineering<br>Washington State University</span></div>
         </div>
         <h1>How do individual choices <em>add up</em> to collective resilience?</h1>
-        <p class="lede">I work in operations research and decision analytics. I study how people, organizations, and AI systems make interdependent decisions under risk, and what tips a community or a supply chain from free-riding to coordinated action. My test beds are wildfire mitigation, evacuation, and the supply chains that rebuild afterwards.</p>
+        <p class="lede">I work in operations research and decision analytics. I study how people, organizations, and AI systems make interdependent decisions under risk, with applications to wildfire mitigation, evacuation, and the supply chains that rebuild communities afterward.</p>
         <div class="cta-row">
           <a class="btn solid" href="#research">See the research
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn" href="#collaborate">Work with me</a>
+          <a class="btn" href="#publications">Publications</a>
           <a class="btn" href="https://scholar.google.com/citations?user=FjNmHj8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
         </div>
       </div>
@@ -475,28 +582,50 @@ h3.sub{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-tran
       </figure>
     </div>
 
-    <div class="strip" aria-label="At a glance">
-      <div><b>433</b><span>Google Scholar citations (Nov 2026)</span></div>
-      <div><b>9</b><span>h-index, i10-index 9</span></div>
-      <div><b>2</b><span>U.S. DOT projects funded as Co-PI</span></div>
-      <div><b>$1.82M</b><span>requested across 5 proposals</span></div>
-    </div>
+    <section class="stats" aria-label="At a glance">
+      <div class="stat accent"><b>$129,999</b><span>external funding secured as Co-PI</span><small>2 U.S. DOT University Transportation Center projects</small></div>
+      <div class="stat"><b>$1.82M</b><span>total requested as Co-PI</span><small>5 proposals to U.S. DOT, HUD, BLM, and Idaho DOT</small></div>
+      <div class="stat"><b>433</b><span>Google Scholar citations</span><small>h-index 9 · November 2026</small></div>
+      <div class="stat"><b>4.71<i>/5</i></b><span>teaching effectiveness</span><small>34 anonymous student evaluations</small></div>
+    </section>
 
-    <div class="featured">
-      <div class="mono" style="color:var(--flu)">Job market paper · sole-authored</div>
-      <h3>When Better AI Does Not Mean Better Collective Judgment: Algorithmic Authority in Wildfire Evacuation Decisions</h3>
-      <p class="muted">Agencies coordinating an evacuation increasingly lean on AI forecasts. This paper asks when a more accurate algorithm makes the group decide worse, because people defer to its authority instead of pooling what they know. Presented at the INFORMS 2026 Job Market Showcase in San Francisco (November 1, 2026).</p>
-    </div>
+    <section class="hl-section" aria-labelledby="hl-h">
+      <h2 class="sec-title" id="hl-h">Highlights</h2>
+      <div class="hl-grid">
+        <article class="hl">
+          <span class="hl-label">Job market paper · Sole-authored</span>
+          <h3>When Better AI Does Not Mean Better Collective Judgment: Algorithmic Authority in Wildfire Evacuation Decisions</h3>
+          <p>When does a more accurate AI make a group of agencies decide worse, because they defer to its authority instead of pooling what they know?</p>
+          <p class="hl-foot">Presented at the INFORMS 2026 Job Market Showcase · NSF AI-SDM Workshop, Carnegie Mellon University</p>
+        </article>
+        <article class="hl">
+          <span class="hl-label">Funded research · Co-PI</span>
+          <ul class="hl-list">
+            <li><b>Timber supply chain resilience for post-wildfire reconstruction</b><span>U.S. DOT, PacTrans University Transportation Center · $50,000 · 2025</span></li>
+            <li><b>Strategic traffic enforcement planning through behaviorally informed modeling</b><span>U.S. DOT, Center for Healthy and Durable Transportation · $79,999 · 2025</span></li>
+          </ul>
+          <p class="hl-foot"><a href="#grants">All grants and proposals →</a></p>
+        </article>
+        <article class="hl">
+          <span class="hl-label">Recognition</span>
+          <ul class="hl-list">
+            <li><b>Graduate Research Award, Outstanding Contribution</b><span>International Project Management Association (IPMA), 2024</span></li>
+            <li><b>Wildfire mitigation research featured in the media</b><span><a href="https://news.wsu.edu/press-release/2026/08/06/model-could-help-communities-set-effective-subsidies-for-wildfire-mitigation/" target="_blank" rel="noopener">WSU News</a> · <a href="https://www.preventionweb.net/news/model-could-help-communities-set-effective-subsidies-wildfire-mitigation" target="_blank" rel="noopener">UN PreventionWeb</a> · <a href="https://greatbasinfirescience.org/?p=408838" target="_blank" rel="noopener">Great Basin Fire Science Exchange</a>, 2026</span></li>
+            <li><b>Invited webinar speaker</b><span>POMS College of Supply Chain Management, November 2026</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
     <div class="section-gap news">
       <div>
-        <div class="block-h"><h2>News</h2><span class="mono muted">Milestones, funding, and awards</span></div>
+        <h2 class="sec-title">News</h2>
         <div id="newsList"></div>
       </div>
       <aside class="callout" aria-label="Collaboration">
-        <span class="mono">On the 2026–27 academic job market</span>
-        <h2>Looking for collaborators and colleagues</h2>
-        <p>I'm open to faculty positions worldwide and to new collaborations. I'd enjoy talking with anyone working on:</p>
+        <span class="hl-label">Open to collaboration</span>
+        <h2>Let's work together</h2>
+        <p>I'm open to faculty positions and new collaborations, especially on:</p>
         <ul>
           <li>Supply chain resilience and logistics</li>
           <li>Community resilience to natural hazards</li>
@@ -1126,12 +1255,12 @@ h3.sub{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.06em;text-tran
       {d:"Mar 2021", k:"mile", h:"Started the Ph.D. in Management Science and Engineering with Prof. Qin Su."}
     ]}
   ];
-  document.getElementById("newsList").innerHTML = CHAPTERS.map(c=>`<div class="chapter">
-    <figure class="place">${c.img?`<img src="${c.img}" alt="${esc(c.alt||c.place)}" loading="lazy">`:`<div class="postcard" style="background:${c.tone}"><span class="mono">${esc(c.coords)}</span><b>${esc(c.place.split(",")[0])}</b></div>`}
-      <figcaption><b>${esc(c.inst)}</b><span>${esc(c.place)} · ${esc(c.years)}</span></figcaption></figure>
-    <ul class="items">${c.items.map(n=>`<li class="item"><time>${esc(n.d)}</time><div class="what">
-      <div class="head"><span class="kind ${KIND[n.k][1]}">${KIND[n.k][0]}</span></div><div>${n.h}</div>
-      ${n.g?`<dl class="grant-detail">${Object.entries(n.g).map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>`:""}</div></li>`).join("")}</ul></div>`).join("");
+  const MON={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+  const when=d=>{const y=Math.max(...(d.match(/\d{4}/g)||[0]).map(Number)); const m=MON[(d.match(/[A-Z][a-z]{2}/)||[""])[0]]||0; return y*100+m;};
+  const NEWS=CHAPTERS.flatMap(c=>c.items).map((n,i)=>({...n,i})).sort((a,b)=>when(b.d)-when(a.d)||a.i-b.i);
+  document.getElementById("newsList").innerHTML = `<ul class="nlist">${NEWS.map(n=>`<li>
+    <time>${esc(n.d)}</time><div><span class="nk nk-${n.k}">${KIND[n.k][0]}</span><p>${n.h}</p>
+    ${n.g?`<p class="nmeta">${esc(n.g.Sponsor)} · ${esc(n.g.Amount)} · ${esc(n.g.Role)}</p>`:""}</div></li>`).join("")}</ul>`;
 
   /* ---------- Publications ---------- */
   const PUBS = [
