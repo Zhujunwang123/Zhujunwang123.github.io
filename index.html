@@ -520,6 +520,17 @@ h3.sub{font-family:var(--f-body);font-size:.72rem;font-weight:700;letter-spacing
 footer h2{font-size:1.6rem}
 .email code{font-family:var(--f-body)}
 
+/* research topics: each topic in its own numbered box */
+#pg-research{counter-reset:topic}
+.topic{counter-increment:topic;border:1px solid var(--line);border-radius:14px;padding:32px;margin-top:36px;gap:28px;overflow:hidden;background:var(--paper)}
+.topic + .topic{margin-top:36px}
+.overview + .topic{margin-top:0}
+.topic-head{max-width:none;margin:-32px -32px 0;padding:26px 32px;background:var(--panel);border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:22px;align-items:start}
+.topic-head::before{content:counter(topic);grid-row:1 / span 3;width:52px;height:52px;border-radius:50%;background:var(--mal);color:var(--paper);display:grid;place-items:center;font-family:var(--f-display);font-weight:600;font-size:1.6rem;line-height:1}
+.topic-head > *{grid-column:2;max-width:820px}
+.topic-head h2{margin:4px 0 10px}
+@media (max-width:640px){.topic{padding:20px}.topic-head{margin:-20px -20px 0;padding:20px;column-gap:14px}.topic-head::before{width:40px;height:40px;font-size:1.25rem}}
+
 /* Background page keeps its personality */
 #pg-background h1,#pg-background h2,#pg-background h3{font-family:"Gloock", Georgia, serif;font-weight:400;letter-spacing:0}
 
