@@ -531,6 +531,36 @@ footer h2{font-size:1.6rem}
 .topic-head h2{margin:4px 0 10px}
 @media (max-width:640px){.topic{padding:20px}.topic-head{margin:-20px -20px 0;padding:20px;column-gap:14px}.topic-head::before{width:40px;height:40px;font-size:1.25rem}}
 
+/* service page */
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.svc{border:1px solid var(--line);border-top:3px solid var(--mal);border-radius:4px 4px 10px 10px;padding:24px;display:grid;gap:8px;align-content:start}
+.svc h3{font-size:1.3rem}
+.svc h3 a{color:var(--ink);text-decoration:none}
+.svc h3 a:hover{text-decoration:underline}
+.svc p{font-size:.95rem;color:var(--muted)}
+.svc-role{justify-self:start;font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--paper);background:var(--mal);padding:4px 10px;border-radius:999px}
+.svc-when{font-size:.86rem;font-weight:600;color:var(--muted)}
+@media (max-width:760px){.svc-grid{grid-template-columns:minmax(0,1fr)}}
+.svc-rows{list-style:none;margin:0;padding:0}
+.svc-rows li{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.svc-rows li:first-child{border-top:0;padding-top:4px}
+.svc-rows .svc-role{align-self:start;margin-top:3px;background:transparent;color:var(--mal);border:1px solid var(--mal)}
+.svc-rows h3{font-family:var(--f-body);font-weight:600;font-size:1.05rem;line-height:1.4;margin-bottom:6px}
+.svc-rows p{font-size:.95rem}
+.svc-meta{color:var(--muted);font-size:.88rem!important;margin-bottom:8px}
+@media (max-width:640px){.svc-rows li{grid-template-columns:minmax(0,1fr);gap:10px}}
+.journals{list-style:none;margin:0;padding:0;counter-reset:j;border-top:1px solid var(--line)}
+.journals li{counter-increment:j;display:grid;grid-template-columns:44px minmax(0,1fr);align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);font-size:1.02rem}
+.journals li::before{content:counter(j,decimal-leading-zero);font-size:.82rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.svc-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.svc-simple{list-style:none;margin:0;padding:0;display:grid}
+.svc-simple li{padding:12px 0;border-top:1px solid var(--line)}
+.svc-simple li:first-child{border-top:0;padding-top:0}
+.svc-simple b{display:block;font-weight:600;font-size:.97rem}
+.svc-simple span{display:block;font-size:.87rem;color:var(--muted);margin-top:2px}
+@media (max-width:760px){.svc-two{grid-template-columns:minmax(0,1fr)}}
+h2.sec-title.section-gap{margin-top:64px}
+
 /* Background page keeps its personality */
 #pg-background h1,#pg-background h2,#pg-background h3{font-family:"Gloock", Georgia, serif;font-weight:400;letter-spacing:0}
 
@@ -552,6 +582,7 @@ footer h2{font-size:1.6rem}
       <a href="#talks">Talks</a>
       <a href="#teaching">Teaching</a>
       <a href="#grants">Grants</a>
+      <a href="#service">Service</a>
       <a href="#background">Background</a>
     </nav>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
@@ -1113,6 +1144,92 @@ footer h2{font-size:1.6rem}
   </div>
 </section>
 
+<!-- ============ SERVICE ============ -->
+<section class="page" id="pg-service" data-page="service" hidden>
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow mono">Service</div>
+      <h1>Service to the research community</h1>
+      <p>Editorial work, peer review, and forums that connect researchers across construction, infrastructure, operations, and AI.</p>
+    </div>
+
+    <h2 class="sec-title">Editorial roles</h2>
+    <div class="svc-grid">
+      <article class="svc">
+        <span class="svc-role">Special Corresponding Expert</span>
+        <h3><a href="https://journal.hep.com.cn/fem" target="_blank" rel="noopener"><i>ENGINEERING Management</i></a></h3>
+        <span class="svc-when">2025 – present</span>
+        <p>Organize open-access research forums, coordinate peer review, engage experts in supply chain management and intelligent decision-making, and support the journal's international outreach.</p>
+      </article>
+      <article class="svc">
+        <span class="svc-role">Editorial Board Member</span>
+        <h3><i>Civil and Energy Research</i></h3>
+        <span class="svc-when">2025 – present</span>
+        <p>Review manuscripts, provide editorial advice, and support the journal's scholarly development.</p>
+      </article>
+    </div>
+
+    <h2 class="sec-title section-gap">Forums and research community</h2>
+    <ul class="svc-rows">
+      <li>
+        <span class="svc-role">Co-host and moderator</span>
+        <div>
+          <h3>72nd Public Forum for Engineering Management: Intelligent and Sustainable Building and Infrastructure in the Digital Age</h3>
+          <p class="svc-meta">Online · February 21, 2026 · Organized by <a href="https://journal.hep.com.cn/fem" target="_blank" rel="noopener"><i>ENGINEERING Management</i></a> and the School of Management, Huazhong University of Science and Technology · Co-hosted with Prof. Yanyu Wang (Louisiana State University)</p>
+          <p>Brought together four speakers from the University of Alberta, Washington State University, Kent State University, and Carnegie Mellon University on transportation resilience, wildfire risk assessment, open knowledge infrastructure for the built environment, and human–AI collaboration in civil infrastructure systems.</p>
+        </div>
+      </li>
+      <li>
+        <span class="svc-role">Invited speaker</span>
+        <div>
+          <h3>POMS College of Supply Chain Management, 2026–27 Research Initiative Webinar Series</h3>
+          <p class="svc-meta">Online · November 20, 2026 · Production and Operations Management Society (POMS)</p>
+          <p>Invited talk: <i>From free-riding to collective action in wildfire mitigation: The role of policy incentives</i>.</p>
+        </div>
+      </li>
+      <li>
+        <span class="svc-role">Contributor</span>
+        <div>
+          <h3>POMS SCM Research Bites Series</h3>
+          <p class="svc-meta">Video release planned for January 2027 · <a href="https://www.youtube.com/@POMSSCMResearchBites" target="_blank" rel="noopener">Research Bites on YouTube</a></p>
+          <p>A five-minute video that shares my wildfire mitigation research with the broader supply chain community.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="sec-title section-gap">Peer review</h2>
+    <p class="muted" style="margin-bottom:14px">Reviewer for the following journals:</p>
+    <ol class="journals">
+      <li><i>International Journal of Project Management</i></li>
+      <li><i>Expert Systems with Applications</i></li>
+      <li><i>Engineering Applications of Artificial Intelligence</i></li>
+      <li><i>IEEE Transactions on Intelligent Transportation Systems</i></li>
+      <li><i>ENGINEERING Management</i></li>
+      <li><i>Journal of Infrastructure Preservation and Resilience</i></li>
+      <li><i>Information Technology and Management</i></li>
+      <li><i>Artificial Intelligence and Applications</i></li>
+    </ol>
+
+    <div class="section-gap svc-two">
+      <div>
+        <h2 class="sec-title">Professional societies and volunteering</h2>
+        <ul class="svc-simple">
+          <li><b>Volunteer, INFORMS Pro Bono Analytics</b><span>2026 – present · Connecting analytics volunteers with nonprofit organizations</span></li>
+          <li><b>Member, Institute for Operations Research and the Management Sciences (INFORMS)</b></li>
+          <li><b>Member, Production and Operations Management Society (POMS)</b><span>College of Supply Chain Management</span></li>
+          <li><b>Member, American Society of Civil Engineers (ASCE)</b></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="sec-title">Student community</h2>
+        <ul class="svc-simple">
+          <li><b>Co-founder, Mathematical Modeling Association</b><span>Zhengzhou University, 2016 – 2019 · Grew a university-wide association to 500+ members; organized English-medium training and mentored MCM/ICM award-winning teams</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ BACKGROUND ============ -->
 <section class="page" id="pg-background" data-page="background" hidden>
   <div class="wrap">
@@ -1183,30 +1300,6 @@ footer h2{font-size:1.6rem}
           <li>Innovative Leading Talents Fellowship<span>Xi'an Jiaotong University, 2022–2024, $22,800 per year</span></li>
           <li>Outstanding Graduate<span>Xi'an Jiaotong University (Ph.D.); Zhengzhou University and Henan Province (B.E.)</span></li>
         </ul>
-      </div>
-    </div>
-    <div class="section-gap">
-      <div class="block-h"><h2>Service</h2></div>
-      <div class="lists">
-        <div>
-          <h3 class="sub">Editorial roles</h3>
-          <ul>
-            <li>Editorial Board Member, <i>Civil and Energy Research</i><span>Contribute to manuscript review, provide editorial advice, and promote scholarly development.</span></li>
-            <li>Special Corresponding Expert, <i>ENGINEERING Management</i><span>2025–present. Organize open-access research seminars, coordinate peer review, engage experts in supply chain management and intelligent decision-making, and support the journal's international outreach.</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="sub">Peer reviewer</h3>
-          <ul>
-            <li><i>International Journal of Project Management</i></li>
-            <li><i>ENGINEERING Management</i></li>
-            <li><i>Expert Systems with Applications</i></li>
-            <li><i>Engineering Applications of Artificial Intelligence</i></li>
-            <li><i>Artificial Intelligence and Applications</i></li>
-            <li><i>Information Technology and Management</i></li>
-            <li><i>IEEE Transactions on Intelligent Transportation Systems</i></li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
